@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer'
 
-export default function Contact() {
+export default function Products() {
     return (
         <div>
             <Navbar />
