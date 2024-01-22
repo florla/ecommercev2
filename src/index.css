@@ -215,8 +215,8 @@ footer {
   text-align: right;
 }
 
-.social-media a {
-  font-size: 40px;
+.social-media img {
+  height: 2.5rem;
   color: #ec297b;
   text-decoration: none;
   margin-right: 20px;

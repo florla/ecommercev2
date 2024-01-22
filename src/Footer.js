@@ -13,15 +13,15 @@ const Footer = () => {
                     <button>Subscribe</button>
                 </div>
                 <div className="social-media">
-                    <i>
-                        <a className="fa fa-instagram socials" href="https://instagram.com" target="_blank"></a>
-                    </i>
-                    <i>
-                        <a className="fa fa-facebook-f socials" href="https://www.facebook.com" target="_blank"></a>
-                    </i>
-                    <i>
-                        <a className="fa fa-twitter" href="https://www.twitter.com" target="_blank"></a>
-                    </i>
+                    <a href="https://instagram.com" target="_blank">
+                        <img className="fa fa-instagram socials" src="photos/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img className="fa fa-facebook-f socials" src="photos/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://x.com" target="_blank">
+                        <img className="fa fa-twitter" src="photos/x.png" alt="X" />
+                    </a>
                 </div>
             </div>
             <div className="copyright">
