@@ -30,6 +30,21 @@ app.post('/submitForm', (req, res) => {
     });
 });
 
+app.post('/subscribe', (req, res) => {
+    const { userEmail } = req.body;
+
+    const sql = 'INSERT INTO subscription (user_email) VALUES (?)';
+    connection.query(sql, [userEmail], (error, results) => {
+        if (error) {
+            console.error('Error inserting data into subscription table:', error);
+            res.status(500).json({ error: 'Internal Server Error' });
+        } else {
+            console.log('Data inserted into subscription table');
+            res.status(200).json({ message: 'Subscription submitted successfully' });
+        }
+    });
+});
+
 app.get('/products', (req, res) => {
     const sql = 'SELECT * FROM products';
     connection.query(sql, (err, data) => {
