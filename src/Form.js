@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Form = () => {
+    // State for form data
     const [formData, setFormData] = useState({
         fName: '',
         lName: '',
@@ -8,6 +9,7 @@ const Form = () => {
         comments: '',
     });
 
+    // State for form validation errors
     const [formErrors, setFormErrors] = useState({
         fName: '',
         lName: '',
@@ -15,6 +17,7 @@ const Form = () => {
         comments: '',
     });
 
+    // Function to validate the form
     const validateForm = () => {
         let isValid = true;
         const newErrors = { ...formErrors };
@@ -52,10 +55,12 @@ const Form = () => {
             newErrors.comments = '';
         }
 
+        // Update form errors state and return validity status
         setFormErrors(newErrors);
         return isValid;
     };
 
+    // Function to handle form submission
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -93,6 +98,7 @@ const Form = () => {
         }
     };
 
+    // Function to handle input changes
     const handleChange = (event) => {
         const { id, value } = event.target;
         setFormData({
@@ -106,6 +112,7 @@ const Form = () => {
             <h1>Contact Us</h1>
 
             <form name="myForm" onSubmit={handleSubmit}>
+                {/* First Name Input */}
                 <label htmlFor="fName">First Name</label>
                 <input
                     type="text"
@@ -116,6 +123,7 @@ const Form = () => {
                 />
                 <span className="error">{formErrors.fName}</span>
 
+                {/* Last Name Input */}
                 <label htmlFor="lName">Last Name</label>
                 <input
                     type="text"
@@ -126,6 +134,7 @@ const Form = () => {
                 />
                 <span className="error">{formErrors.lName}</span>
 
+                {/* Email Input */}
                 <label htmlFor="userEmail">Email</label>
                 <input
                     type="text"
@@ -136,6 +145,7 @@ const Form = () => {
                 />
                 <span className="error">{formErrors.userEmail}</span>
 
+                {/* Comments Input */}
                 <label htmlFor="comments">Comment</label>
                 <input
                     type="text"
@@ -146,6 +156,7 @@ const Form = () => {
                 />
                 <span className="error">{formErrors.comments}</span>
 
+                {/* Submit Button */}
                 <input type="submit" value="Submit" />
             </form>
         </div>
