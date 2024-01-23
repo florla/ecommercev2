@@ -67,9 +67,8 @@ nav a {
   overflow: hidden;
 }
 
-.carousel {
-  display: flex;
-  transition: 0.5s;
+.carousel .thumbswrapper {
+  display: none !important;
 }
 
 /* featured products */
@@ -124,6 +123,37 @@ p {
   height: 30vh;
 }
 
+/* Product filter */
+#filterCategory,
+#sortBy {
+  width: 12%;
+}
+
+.filter-options {
+  margin: 4%;
+  text-align: center;
+}
+
+.filter-options label {
+  display: block;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #ec297b;
+}
+
+.filter-options select {
+  color: #ec297b;
+}
+
+
+.filter-options select {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
 /* contact form */
 form {
   max-width: 25vw;
@@ -141,6 +171,7 @@ form {
 label {
   display: block;
   text-align: center;
+  margin-top: 6%;
 }
 
 input[type="text"],
@@ -150,7 +181,13 @@ textarea {
   margin-bottom: 15px;
   border: none;
   border-radius: 5px;
-  margin: 6%;
+  margin: 4%;
+}
+
+.error {
+  color: red;
+  font-size: small;
+  padding: 1px;
 }
 
 input[type="submit"] {
@@ -161,9 +198,8 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   display: block;
-  margin: 0 auto;
+  margin: 5% auto;
 }
-
 
 /* footer styling */
 
@@ -211,6 +247,11 @@ footer {
   cursor: pointer;
 }
 
+.error-message {
+  color: red;
+  margin-bottom: 1%;
+}
+
 .social-media {
   text-align: right;
 }
@@ -226,6 +267,7 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+
 
 /* Media query for mobile */
 @media (max-width: 767px) {

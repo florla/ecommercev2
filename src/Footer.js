@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright">
-                &copy; 2023 Starlight. All rights reserved.
+                &copy; 2024 Starlight. All rights reserved.
             </div>
         </footer>
     );

@@ -1,19 +1,21 @@
 import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const Carousel = () => {
+const Carouselslide = () => {
     return (
-        <div class="carousel">
-            <div class="carousel-slide">
-                <img src="/photos/sale.png" alt="We love a sale 25% off everything"/>
+        <Carousel autoPlay infiniteLoop interval={5000} showArrows showStatus={false}>
+            <div>
+                <img src="/photos/sale.png" alt="We love a sale 25% off everything" />
             </div>
-            <div class="carousel-slide" alt="New collection coming soon">
-                <img src="/photos/collection.png" />
+            <div>
+                <img src="/photos/collection.png" alt="New collection coming soon" />
             </div>
-            <div class="carousel-slide">
+            <div>
                 <img src="/photos/name.png" alt="Starlight Jewelry" />
             </div>
-        </div>
+        </Carousel>
     );
 };
 
-export default Carousel;
+export default Carouselslide;

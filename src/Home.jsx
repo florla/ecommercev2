@@ -1,13 +1,13 @@
 import React from 'react';
 import Footer from './Footer';
-import Carousel from './Carousel';
+import Carouselslide from './Carousel';
 import Featured from './Featured';
 
 
 export default function Home() {
     return (
         <div>
-            <Carousel />
+            <Carouselslide/>
             <Featured />
             <Footer />
         </div>

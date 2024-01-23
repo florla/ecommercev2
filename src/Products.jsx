@@ -4,7 +4,7 @@ import Footer from './Footer';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [sortBy, setSortBy] = useState('default'); // default is no sorting
-  const [filterCategory, setFilterCategory] = useState('all'); // 'all' means no category filter
+  const [filterCategory, setFilterCategory] = useState('all'); // 'all' is no category filter
 
   useEffect(() => {
     console.log('Fetching data...');
@@ -54,7 +54,6 @@ const Products = () => {
           <option value="Earrings">Earrings</option>
         </select>
       </div>
-
       <div className="products">
         {filteredProducts.map(product => (
           <div key={product.id} className="item">
